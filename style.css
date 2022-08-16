@@ -24,10 +24,40 @@
     --color10:hsl(0, 0%, 100%);
 
     /* ## Typography */
-    
+
     --fontpadrao1: 'Barlow', sans-serif;
     --fontpadrao2:'Fraunces', serif;;
 }
 body{
     font-size: 18px;
+    height: 100vh;
+   
+}
+.container__header{
+    border: 2px solid red;
+    background-image: url('images/desktop/image-header.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+}
+.container__header_nav{
+    border: 1px solid black;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--fontpadrao1);
+}
+.container__main__menu{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    
+}
+.container__main__menu a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    color:var(--color10) ;
+ 
 }
