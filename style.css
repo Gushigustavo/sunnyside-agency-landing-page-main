@@ -34,30 +34,201 @@ body{
    
 }
 .container__header{
-    border: 2px solid red;
+
     background-image: url('images/desktop/image-header.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     height: 100%;
+    
 }
-.container__header_nav{
-    border: 1px solid black;
-    padding: 30px;
+.container__header__box1{
+    padding: 15px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+   
     font-family: var(--fontpadrao1);
+
+}
+.container__header_nav{
+    display: flex;
 }
 .container__main__menu{
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 40px;
     
 }
+.container__main__menu > li{
+    padding: 10px;
+    
+}
+.container__main__menu li:nth-child(4){
+    background-color:var(--color10);
+    width: 125px;
+    text-align: center;
+    border-radius: 50px;
+    font-family: var(--fontpadrao2);
+    transition: 400ms;
+}
+.container__main__menu li:nth-child(4) > a{
+    color: black;
+    padding: 15px;
+}
+.container__main__menu li:nth-child(4):hover{
+    cursor: pointer;
+   background-color: #6fcfffbd;
+   
+    
+}
+.container__main__menu li:nth-child(4) a:hover{
+   color: white;
+   
+    
+}
+
 .container__main__menu a{
+    
     text-decoration: none;
-    font-weight: bold;
     font-size: 15px;
-    color:var(--color10) ;
- 
+    color:var(--color10);
+}
+.container__header__box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.container__header__title{
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-family: var(--fontpadrao2);
+    font-size: 2.5em;
+    font-weight: bolder;
+    color: var(--color10);
+    margin: 70px 0px;
+    display: flex;
+    justify-content: center;
+   
+  
+}
+
+/* Inicio do Main */
+
+.container__main{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+
+}
+.container__main__box1{
+    border: 1px solid gold;
+    display: flex;
+}
+.container__main__box2{
+    border: 1px solid rgb(197, 168, 8);
+    display: flex;
+
+}
+.mainbox__boxtext{
+    padding: 100px;
+    font-family: var(--fontpadrao2);
+    width:100%;
+   
+}
+.mainbox__boxtext > h2{
+    font-size: 2.4em;
+    color: var(--color6);
+}
+.mainbox__boxtext > p{
+    border: 1px solid green;
+    font-size:17px;
+    font-family: var(--fontpadrao1);
+    margin: 40px 0px;
+    color: var(--color8);
+    line-height: 25px;
+
+}
+.mainbox__boxtext > a{
+   color: var(--color6);
+   font-size: 1.1em;
+    text-transform: uppercase;
+   font-weight:900;
+}
+
+
+@media screen and (max-width:375px) {
+   
+    .container__header_nav{
+        display: none;
+        margin-left: -197px;
+        
+    }   
+    .container__header_nav.active{
+        display:block;
+      
+    } 
+    .container__main__menu{
+        position: absolute;
+        background-color: var(--color10);
+        left: 30px;
+        top:70px;
+        width:85%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+        
+         
+        }
+        .container__main__menu li:nth-child(4){
+            background-color:var(--color2);
+            width: 125px;
+            text-align: center;
+            border-radius: 50px;
+            font-family: var(--fontpadrao2);
+            transition: 400ms;
+        }
+        .container__main__menu a{
+    
+            text-decoration: none;
+            font-size: 15px;
+            color:var(--color9);
+            text-transform: lowercase;
+}
+.test{
+    display: block;
+    width: 20px;
+    border-top: var(--color10) 2px solid;
+    transition: 200ms;
+
+    
+}
+.test::after, .test::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    /* Variavel se mudar a cor do menu Hamburger o affte e o Before tamb mudara */
+    background-color:var(--color10); 
+    margin-top: 5px;
+    transition: 400ms;
+    position: relative;
+   
+}
+.test.active{
+    border-top: transparent;
+}
+.test.active::before{
+    transform: rotate(45deg);
+}
+.test.active::after{
+    transform: rotate(-45deg);
+    top: -7px;
+    
+}
 }

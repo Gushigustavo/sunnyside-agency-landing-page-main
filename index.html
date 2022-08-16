@@ -15,27 +15,36 @@
   </style>
 </head>
 <body>
-
+  <!-- Caixa principal -->
   <header class="container__header">
-    <nav class="container__header_nav">
-      <div class="container__header__imagemlogo">
-        <img src="images/logo.svg" alt="ImagemLogo">
+    
+    <div class="container__header__box1">
+      <a href="#"><img src="images/logo.svg" alt="ImagemLogo"></a>
+      
+          <span id="btn__mobile" class="test"></span>
+       
+       <!-- Menu de navegação -->
+      <nav id="menunav" class="container__header_nav">
+        <ul class="container__main__menu">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
       </div>
-      <ul class="container__main__menu">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <h1>We are creatives</h1>
+
+    <div class="container__header__box2">
+      <h1 class="container__header__title">We are creatives</h1>
+      <img src="images/icon-arrow-down.svg" alt="Seta para baixo">
+    </div>
   </header>
 
   <main class="container__main">
 
     <div class="container__main__box1">
 
-      <div class="main__box1__boxtext">
+      <div class="mainbox__boxtext">
         <h2>Transform your brand</h2>
         <p>
           We are a full-service creative agency specializing in helping brands grow fast.
@@ -43,10 +52,11 @@
         </p>
         <a href="#" target="_blank">Learn more</a>
 
-        <div class="boximagem1">
-       <img src="images/desktop/image-transform.jpg" alt="">
-        </div>
+        
       </div>
+      <div class="boximagem1">
+        <img src="images/desktop/image-transform.jpg" alt="">
+         </div>
     </div>
 
     <div class="container__main__box2">
@@ -55,7 +65,7 @@
          <img src="images/desktop/image-stand-out.jpg" alt="">
       </div>
 
-      <div class="main__box2__boxtext">
+      <div class="mainbox__boxtext">
         <h2>Stand out to the right audience</h2>
         <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
         <a href="#" target="_blank">Learn more</a>
@@ -131,5 +141,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
