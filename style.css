@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&display=swap');
 *{
     box-sizing: border-box;
     padding: 0;
@@ -124,11 +124,10 @@ body{
 
 }
 .container__main__box1{
-    border: 1px solid gold;
     display: flex;
 }
 .container__main__box2{
-    border: 1px solid rgb(197, 168, 8);
+    /* border: 1px solid rgb(197, 168, 8); */
     display: flex;
 
 }
@@ -136,6 +135,8 @@ body{
     padding: 100px;
     font-family: var(--fontpadrao2);
     width:100%;
+    transition: 400ms;
+   
    
 }
 .mainbox__boxtext > h2{
@@ -143,7 +144,6 @@ body{
     color: var(--color6);
 }
 .mainbox__boxtext > p{
-    border: 1px solid green;
     font-size:17px;
     font-family: var(--fontpadrao1);
     margin: 40px 0px;
@@ -152,11 +152,86 @@ body{
 
 }
 .mainbox__boxtext > a{
+   position:relative;
    color: var(--color6);
-   font-size: 1.1em;
-    text-transform: uppercase;
+   font-size: 1em;
+   text-transform: uppercase;
    font-weight:900;
+   text-decoration: none;
+   letter-spacing: 1px;
 }
+
+/* Area de códigos line Underine 1*/
+
+.main__box1__link::before{
+    content: '';
+    position: absolute;
+    top: 15px;
+    background-color:var(--color1);
+    width: 150px;
+    left: -5px;
+    height: 10px;
+    border-radius: 20px;
+    opacity: 0.5;
+    
+}
+
+.main__box1__link::after { 
+    content: '';
+    position: absolute;
+    top: 15px;
+    width: 150px;
+     left: -5px;
+    height: 12px;
+    border-radius: 20px;
+    transition: all 300ms;
+}
+
+.main__box1__link:hover::after{
+    background-color: var(--color1);
+    opacity: 1;
+}
+
+
+/* Area de códigos line Underine 2*/
+.main__box2__link::before{
+    content: '';
+    position: absolute;
+    top: 15px;
+    background-color:var(--color2);
+    width: 150px;
+    left: -5px;
+    height: 10px;
+    border-radius: 20px;
+    opacity: 0.5;
+
+}
+.main__box2__link:after{
+    content: '';
+    position: absolute;
+    top: 15px;
+    width: 150px;
+    left: -5px;
+    height: 12px;
+    border-radius: 20px;
+    transition: all 300ms;
+}
+.main__box2__link:hover::after{
+    background-color: var(--color2);
+    opacity: 1;
+
+}
+.boximagem{
+    /* border: 2px solid red; */
+    height: 503.5px;
+    width: 673.5px;
+    
+}
+
+
+
+
+
 
 
 @media screen and (max-width:375px) {
