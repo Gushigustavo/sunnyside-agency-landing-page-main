@@ -403,6 +403,7 @@ width: 25%;
         width: 20px;
         border-top: var(--color10) 2px solid;
         transition: 200ms;
+       
     
         
     }
@@ -435,17 +436,15 @@ width: 25%;
    
     .container__header_nav{
         display: none;
-        margin-left: -197px;
-        
-        
+
     }   
     .container__header_nav.active{
-        display:block;
-        transition: 400ms;
-      
+        display: block;
+        
     } 
     
     .container__main__menu{
+        border-radius: 10px;
         position: absolute;
         background-color: var(--color10);
         left: 19px;
@@ -456,7 +455,7 @@ width: 25%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-       
+
         
          
         }
